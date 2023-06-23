@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Rad na tekst poljima</title>
+</head>
+<body>
+    <form name="form1"> Unesite ime:<br> <input type="text" name="namefield" size=30 value="Ime: "
+            onFocus="document.form1.namefield.select()"> </form>
+    <script>
+        // Kako referencirati formu kroz JavaScript? 
+        // document.form[].element.property 
+        document.write("Vrsta polja je:<em> " + document.form1.namefield.type);
+        document.write("<br></em>Ime tekst boksa je:<em> " + document.form1.namefield.name);
+        document.write("<br></em>Vrednost tekst boksa je:<em> " + document.form1.namefield.value);
+        document.write("<br></em>Velicina tekst polja je:<em> " + document.form1.namefield.size);
+    </script>
+</body>
+</html>
