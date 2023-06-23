@@ -1,0 +1,29 @@
+<html>
+<title>Using Links </title>
+</head>
+<body>
+    <h2>Links i njegova svojstva</h2>
+    <a href="http://search.yahoo.com/bin/search?p=javascript">
+        Search for JavaScript Stuff
+    </a>
+    <p>
+        <a href="http://google.com">Go to Google</a>
+    </p>
+    <p>
+        Click here for Yahoo <br> <a href="http://www.yahoo.com"> <img src="yahoo.bmp"> </a>
+    </p>
+    <script>
+        document.write("<br><b>Ovaj dokument ima " + document.links.length + " linka.<br></b>");
+        for (i = 0; i < document.links.length; i++) {
+            document.write("<u>document.links[" + i + "]:</u><br>");
+            document.write("<b>hostname:</b> " + document.links[i].hostname + "<br>");
+            document.write("<b>href: </b>" + document.links[i].href + "<br>");
+            document.write("<b>pathname:</b>" + document.links[i].pathname + "<br>");
+            document.write("<b>port:</b> " + document.links[i].port + "<br>");
+            document.write("<b>query:</b> " + document.links[i].search + "<br>");
+            document.write("<b>protocol:</b> " + document.links[i].protocol + "<br><br>");
+        } 
+    </script>
+</body>
+</html>
+
