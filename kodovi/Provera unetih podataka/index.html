@@ -1,0 +1,17 @@
+<html>
+<head>
+    <title>Radio Buttons</title>
+    <script
+        name="JavaScript"> function changeBg(f) { for (var i = 0; i < f.color.length; i++) { if (f.color[i].checked) { document.bgColor = f.color[i].value; } } } </script>
+</head>
+<body bgcolor="#CCFFFF">
+    <form name=”forma” method=”post” onsubmit="return Proveri(this)"> 
+        <label> Da li se slažete sa uslovima korišćenja?</label> 
+        <input name="usloviKoriscenja" type="checkbox" value=""/><br/> 
+        <label> Unesite e-mail </label> 
+        <input name="email" type="text" /> 
+        <input type="submit" value="Prosledi" /> 
+   </form>
+   
+</body>
+</html>
