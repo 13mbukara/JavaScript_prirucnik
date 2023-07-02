@@ -59,3 +59,10 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
   console.log(listaInformacija);
 });
+
+document.getElementById("btn2").addEventListener("click", function () {
+  var inputValue = document.querySelector("input[type=text]").value;
+  var listItem = document.createElement("li");
+  listItem.textContent = inputValue;
+  document.getElementById("predmeti").appendChild(listItem);
+});
