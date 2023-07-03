@@ -1,107 +1,27 @@
-<head><link rel="stylesheet" type="text/css" href="../../style.css" /></head>
-<body>
-    <div>
-        <script>
-            function getValue() {
-                var x = document.getElementById("myHeader")
-                alert(x.innerHTML)
-            }
-            function getElements_ByName() {
-                var x = document.getElementsByName("myInput");
-                alert("Elemenata sa imenom 'myInput' ima: " + x.length);
-            }
-            function getElements_ByTag() {
-                var x = document.getElementsByTagName("input");
-                alert("Elemenata sa tagom 'input' ima: " + x.length);
-            }
-            function getElements_ById() {
-                var x = document.getElementById("I3");
-                alert("Izabrali ste broj: " + x.value);
-            }
-        </script>
-        <script>
-            document.writeln("Ovo je primer u kome su obradjene sledece funkcije: Writeln, getElementByID, getElementByName i getElementByTagName!")
-        </script>
-        <br />
-        <br />
-        <h1 id="myHeader" onclick="getValue()">Ovo je naslov</h1>
-        <p>Klikni na naslov da bi dobio njegovu vrednost</p>
-        <table>
-            <tr>
-                <td width="90px">
-                    Ime:
-                </td>
-                <td>
-                    <input name="myInput" type="text" size="20" id="Ime" />
-                </td>
-            </tr>
-            <tr>
-                <td width="90px">
-                    Prezime:
-                </td>
-                <td>
-                    <input name="myInput" type="text" size="20" id="Prezime" />
-                </td>
-            </tr>
-            <tr>
-                <td width="90px">
-                    Organizacija:
-                </td>
-                <td>
-                    <input name="myInput" type="text" size="20" id="Organizacija" />
-                </td>
-            </tr>
-        </table>
-        <br />
-        <input type="button" onclick="getElements_ByName()" value="Koliko elemenata je nazvano 'myInput'?" id="I1" />
-        <br /><br />
-        <table>
-            <tr>
-                <td width="90px">
-                    Adresa:
-                </td>
-                <td>
-                    <input name="other" type="text" size="20" id="Adresa" />
-                </td>
-            </tr>
-            <tr>
-                <td width="90px">
-                    Grad:
-                </td>
-                <td>
-                    <input name="other" type="text" size="20" id="Grad" />
-                </td>
-            </tr>
-            <tr>
-                <td width="90px">
-                    Telefon:
-                </td>
-                <td>
-                    <input name="other" type="text" size="20" id="Telefon" />
-                </td>
-            </tr>
-        </table>
-        <br />
-        <input type="button" onclick="getElements_ByTag()" value="Koliko ima 'input' elemenata?" id="I2" /><br />
-        <br />
-        Izaberite broj:
-        <select name="myInput" id="I3">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-        </select><br /><br />
-        <input type="button" onclick="getElements_ById()" value="Pogadjam broj!" id="I4" /><br />
-    </div>
-    <div id="footer1"></div>
-        <script>
-          fetch("../../footer/footer1.html")
-            .then((response) => response.text())
-            .then((data) => {
-              
-              document.getElementById("footer1").innerHTML = data;
-            })
-            .catch((error) => console.log("Error fetching footer:", error));
-        </script>
-        <script src="script.js"></script>
-</body>
+<html>
+<head>
+    <title>Radio Buttons</title>
+    <script
+        name="JavaScript"> function changeBg(f) { for (var i = 0; i < f.color.length; i++) { if (f.color[i].checked) { document.bgColor = f.color[i].value; } } } </script>
+</head>
+<body bgcolor="#CCFFFF">
+    <font face="arial"><b>
+            <form name="formradio"> Izaberite boju pozadine:<p> <input type=radio name="color" value="#0099CC">dark
+                    cyan<br> <input type=radio name="color" value="#339966">teal<br> <input type=radio name="color"
+                        value="#F33CC">magenta<br> <input type=radio name="color" value="#FFFF66">light yellow<br>
+                    <input type=radio name="color" value="#FF9933">light orange<br>
+                <p> <input type=button value="Kliknite za izbor" onClick="changeBg(this.form);"> <input type=reset>
+            </form>
+            <div id="footer1"></div>
+            <script>
+              fetch("../../footer/footer1.html")
+                .then((response) => response.text())
+                .then((data) => {
+                  
+                  document.getElementById("footer1").innerHTML = data;
+                })
+                .catch((error) => console.log("Error fetching footer:", error));
+            </script>
+            <script src="script.js"></script>
+        </body>
 </html>
