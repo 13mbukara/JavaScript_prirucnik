@@ -1,0 +1,25 @@
+footer {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: auto;
+  }
+  
+  footer nav {
+    margin: 10px;
+  }
+  
+  footer nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      text-align: center;
+    }
+  }
