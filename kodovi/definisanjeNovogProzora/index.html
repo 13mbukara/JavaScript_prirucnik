@@ -1,12 +1,32 @@
-<!DOCTYPE html>
+<!-- 
+VAŽNO!!!
+
+POTREBNO JE PRVO REFRESHOATI STRANICU DA BI SE PROZOR UČITAO
+-->
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <met <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Otvaranje prozora</title>
+        <link rel="stylesheet" type="text/css" href="../../style.css" />
 </head>
 <body> <button id="1">Pomeri prozor - relativno</button> <button id="2">Pomeri prozor - apsolutno</button> <br> <button
         id="3">Promeni velicinu - relativno</button> <button id="4">Promeni velicinu - apsolutno</button>
-    <script src="main.js"></script>
+
+
+        <div id="footer1"></div>
+        <script>
+          fetch("../../footer/footer1.html")
+            .then((response) => response.text())
+            .then((data) => {
+              
+              document.getElementById("footer1").innerHTML = data;
+            })
+            .catch((error) => console.log("Error fetching footer:", error));
+        </script>
+        <script src="script.js"></script>
+    
+
 </body>
 </html>
