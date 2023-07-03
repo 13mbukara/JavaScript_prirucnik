@@ -3,7 +3,7 @@
 </head>
 <body>
     <h2>Links i njegova svojstva</h2>
-    <a href="http://search.yahoo.com/bin/search?p=javascript">
+    <img src="../../images/yahoo.png" alt="Description of the image">
         Search for JavaScript Stuff
     </a>
     <p>
@@ -24,6 +24,17 @@
             document.write("<b>protocol:</b> " + document.links[i].protocol + "<br><br>");
         } 
     </script>
+    <div id="footer1"></div>
+    <script>
+      fetch("../../footer/footer1.html")
+        .then((response) => response.text())
+        .then((data) => {
+          
+          document.getElementById("footer1").innerHTML = data;
+        })
+        .catch((error) => console.log("Error fetching footer:", error));
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
