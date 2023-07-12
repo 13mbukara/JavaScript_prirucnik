@@ -1,15 +1,19 @@
 import student from "./student.js";
 import predmeti from "./predmet.js";
-import { izracunajProsek, prolaziIspit } from "./ocene.js";
+import ocene from "./ocene.js";
 
-console.log(`Student: ${student.ime} ${student.prezime}, Indeks: ${student.brojIndeksa}`);
+//Ispisivanje informacija u konzoli
+console.log("Informacije o studentu:");
+console.log(`Ime: ${student.ime}`);
+console.log(`Prezime: ${student.prezime}`);
+console.log(`Broj indeksa: ${student.brojIndeksa}`);
+
+console.log("Ocene:");
+ocene.forEach((ocena, index) => {
+  console.log(`${index + 1}. ${ocena}`);
+});
+
 console.log("Predmeti:");
-predmeti.forEach((predmet, index) => console.log(`${index + 1}. ${predmet}`));
-
-const ocene = [8, 7, 9, 6, 8];
-const prosek = izracunajProsek(ocene);
-const prolazi = prolaziIspit(ocene);
-
-console.log(`Ocene: ${ocene.join(", ")}`);
-console.log(`Prosek: ${prosek.toFixed(2)}`);
-console.log(`Student ${prolazi ? "p" : "ne p"}rolazi ispit.`);
+predmeti.forEach((predmet, index) => {
+  console.log(`${index + 1}. ${predmet}`);
+});
