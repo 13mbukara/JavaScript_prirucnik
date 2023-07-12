@@ -1,11 +1,3 @@
-function izracunajProsek(ocene) {
-  const sumaOcena = ocene.reduce((sum, ocena) => sum + ocena, 0);
-  return sumaOcena / ocene.length;
-}
+const ocene = [10,6,7,8,7];
 
-function prolaziIspit(ocene) {
-  const prosek = izracunajProsek(ocene);
-  return prosek >= 6.0;
-}
-
-export { izracunajProsek, prolaziIspit };
+export default ocene;
